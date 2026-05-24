@@ -110,6 +110,8 @@ MEMORY
     ram_external_app_two_tone_rx           (rwx) : org = 0xAE050000, len = 32k
     ram_external_app_flex_tx               (rwx) : org = 0xAE060000, len = 32k
     ram_external_app_hard_reset            (rwx) : org = 0xAE070000, len = 32k
+    ram_external_app_enigma_tx             (rwx) : org = 0xAE080000, len = 32k
+
 }
 
 SECTIONS
@@ -251,7 +253,12 @@ SECTIONS
         KEEP(*(.external_app.app_morse_tx.application_information));
         *(*ui*external_app*morse_tx*);
     } > ram_external_app_morse_tx
-
+    
+    .external_app_enigma_tx : ALIGN(4) SUBALIGN(4)
+    {
+        KEEP(*(.external_app.app_enigma_tx.application_information));
+        *(*ui*external_app*enigma_tx*);
+    } > ram_external_app_enigma_tx
     .external_app_sstvtx : ALIGN(4) SUBALIGN(4)
     {
         KEEP(*(.external_app.app_sstvtx.application_information));

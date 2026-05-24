@@ -313,6 +313,11 @@ set(EXTCPPSRC
 	external/morseradiotx/main.cpp
 	external/morseradiotx/ui_morse_radiotx.cpp
 
+	#enigma_tx
+	external/enigma_tx/main.cpp
+	external/enigma_tx/ui_enigma.cpp
+	external/enigma_tx/enigma.hpp
+
 	#keeloqtx
   	external/keeloqtx/main.cpp
   	external/keeloqtx/ui_keeloqtx.cpp
@@ -388,6 +393,7 @@ set(EXTAPPLIST
 	protoview
 	adsbtx
 	#morse_tx
+	enigma_tx
 	sstvtx
 	same_tx
 	mdc_tx
